@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelola Kegiatan | KILAT-06</title>
+<title>Kegiatan | KILAT-06</title>
 
 <link rel="stylesheet" href="../css/style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -23,25 +21,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <li>
 <a href="dashboard.html">
-📊 Dashboard
+<i class="fa-solid fa-gauge"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="warga.html">
+<i class="fa-solid fa-users"></i>
+Data Warga
 </a>
 </li>
 
 <li>
 <a href="pengumuman.html">
-📢 Pengumuman
+<i class="fa-solid fa-bullhorn"></i>
+Pengumuman
 </a>
 </li>
 
 <li class="active">
 <a href="kegiatan.html">
-📅 Kegiatan
+<i class="fa-solid fa-calendar-days"></i>
+Kegiatan
 </a>
 </li>
 
 <li>
 <a href="../index.html">
-🚪 Logout
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<li>
+    <a href="iuran.html">
+        <i class="fa-solid fa-money-bill-wave"></i>
+        Iuran Warga
+    </a>
+</li>
+
+Logout
 </a>
 </li>
 
@@ -51,54 +68,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <main class="content">
 
-<h1>Kelola Kegiatan</h1>
+<h1>📅 Kelola Kegiatan</h1>
 
 <form id="formKegiatan">
 
-<input
-type="text"
-id="nama"
-placeholder="Nama Kegiatan"
-required>
+<input type="hidden" id="editId">
 
-<input
-type="text"
-id="tanggal"
-placeholder="Tanggal"
-required>
+<input type="text" id="nama" placeholder="Nama Kegiatan" required>
 
-<input
-type="text"
-id="waktu"
-placeholder="Waktu"
-required>
+<input type="text" id="tanggal" placeholder="Tanggal" required>
 
-<input
-type="text"
-id="lokasi"
-placeholder="Lokasi"
-required>
+<input type="text" id="waktu" placeholder="Waktu" required>
 
-<textarea
-id="deskripsi"
-placeholder="Deskripsi"
-required></textarea>
+<input type="text" id="lokasi" placeholder="Lokasi" required>
 
-<button type="submit">
+<textarea id="deskripsi" placeholder="Deskripsi" required></textarea>
 
+<button type="submit" id="btnSimpan">
 Simpan Kegiatan
-
 </button>
 
 </form>
 
-<hr>
+<br>
 
-<div id="listKegiatan">
+<input
+type="text"
+id="cari"
+placeholder="🔍 Cari Kegiatan">
 
-Belum ada data.
+<br><br>
 
-</div>
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nama</th>
+<th>Tanggal</th>
+<th>Waktu</th>
+<th>Lokasi</th>
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listKegiatan">
+
+</tbody>
+
+</table>
 
 </main>
 

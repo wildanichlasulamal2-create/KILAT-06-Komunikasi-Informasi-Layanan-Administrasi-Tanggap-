@@ -9,37 +9,37 @@ limit
 }
 from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
-// =======================
-// TOTAL PENGUMUMAN
-// =======================
-
+const totalWarga=document.getElementById("totalWarga");
 const totalPengumuman=document.getElementById("totalPengumuman");
-
 const totalKegiatan=document.getElementById("totalKegiatan");
 
-async function hitungData(){
+// =====================
+// HITUNG DATA
+// =====================
 
-const p=await getDocs(collection(db,"pengumuman"));
+async function hitung(){
 
-const k=await getDocs(collection(db,"kegiatan"));
+const warga=await getDocs(collection(db,"warga"));
+const pengumuman=await getDocs(collection(db,"pengumuman"));
+const kegiatan=await getDocs(collection(db,"kegiatan"));
 
-totalPengumuman.innerHTML=p.size;
-
-totalKegiatan.innerHTML=k.size;
+totalWarga.innerHTML=warga.size;
+totalPengumuman.innerHTML=pengumuman.size;
+totalKegiatan.innerHTML=kegiatan.size;
 
 }
 
-hitungData();
+hitung();
 
-// =======================
-// PENGUMUMAN TERBARU
-// =======================
+// =====================
+// PENGUMUMAN
+// =====================
 
-const pengumuman=document.getElementById("pengumumanTerbaru");
+const listPengumuman=document.getElementById("pengumumanTerbaru");
 
 async function tampilPengumuman(){
 
-pengumuman.innerHTML="";
+listPengumuman.innerHTML="";
 
 const q=query(
 collection(db,"pengumuman"),
@@ -53,7 +53,7 @@ snapshot.forEach((doc)=>{
 
 const data=doc.data();
 
-pengumuman.innerHTML+=`
+listPengumuman.innerHTML+=`
 
 <div class="card">
 
@@ -71,15 +71,15 @@ pengumuman.innerHTML+=`
 
 tampilPengumuman();
 
-// =======================
-// KEGIATAN TERBARU
-// =======================
+// =====================
+// KEGIATAN
+// =====================
 
-const kegiatan=document.getElementById("kegiatanTerbaru");
+const listKegiatan=document.getElementById("kegiatanTerbaru");
 
 async function tampilKegiatan(){
 
-kegiatan.innerHTML="";
+listKegiatan.innerHTML="";
 
 const q=query(
 collection(db,"kegiatan"),
@@ -93,7 +93,7 @@ snapshot.forEach((doc)=>{
 
 const data=doc.data();
 
-kegiatan.innerHTML+=`
+listKegiatan.innerHTML+=`
 
 <div class="card">
 
@@ -112,3 +112,4 @@ kegiatan.innerHTML+=`
 }
 
 tampilKegiatan();
+

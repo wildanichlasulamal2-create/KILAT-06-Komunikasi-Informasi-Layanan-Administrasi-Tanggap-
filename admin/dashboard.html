@@ -31,6 +31,13 @@
             </li>
 
             <li>
+                <a href="warga.html">
+                    <i class="fa-solid fa-users"></i>
+                    Data Warga
+                </a>
+            </li>
+
+            <li>
                 <a href="pengumuman.html">
                     <i class="fa-solid fa-bullhorn"></i>
                     Pengumuman
@@ -45,6 +52,13 @@
             </li>
 
             <li>
+                <a href="iuran.html">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    Iuran Warga
+                </a>
+            </li>
+
+            <li>
                 <a href="../index.html">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
@@ -55,47 +69,62 @@
 
     </aside>
 
-    <!-- Main -->
-   <main class="content">
+    <!-- Main Content -->
+    <main class="content">
 
-<h1>Dashboard Administrator</h1>
+        <h1>Dashboard Administrator</h1>
 
-<p>Selamat Datang di Sistem KILAT-06</p>
+        <p>Selamat Datang di Sistem Informasi RT KILAT-06</p>
 
-<div class="cards">
+        <!-- Statistik -->
+        <div class="cards">
 
-    <div class="box">
-        <h3 id="totalPengumuman">0</h3>
-        <p>Total Pengumuman</p>
-    </div>
+            <div class="box">
+                <h2 id="totalWarga">0</h2>
+                <p>👥 Total Warga</p>
+            </div>
 
-    <div class="box">
-        <h3 id="totalKegiatan">0</h3>
-        <p>Total Kegiatan</p>
-    </div>
+            <div class="box">
+                <h2 id="totalPengumuman">0</h2>
+                <p>📢 Total Pengumuman</p>
+            </div>
 
-</div>
+            <div class="box">
+                <h2 id="totalKegiatan">0</h2>
+                <p>📅 Total Kegiatan</p>
+            </div>
 
-<br><br>
+        </div>
 
-<h2>📢 Pengumuman Terbaru</h2>
+        <br>
 
-<div id="pengumumanTerbaru">
+        <!-- Pengumuman -->
+        <div class="card">
 
-Memuat data...
+            <h2>📢 Pengumuman Terbaru</h2>
 
-</div>
+            <div id="pengumumanTerbaru">
 
-<br><br>
+                Memuat data...
 
-<h2>📅 Kegiatan Terbaru</h2>
+            </div>
 
-<div id="kegiatanTerbaru">
+        </div>
 
-Memuat data...
+        <br>
 
-</div>
+        <!-- Kegiatan -->
+        <div class="card">
 
+            <h2>📅 Kegiatan Terbaru</h2>
+
+            <div id="kegiatanTerbaru">
+
+                Memuat data...
+
+            </div>
+
+        </div>
 
     </main>
 

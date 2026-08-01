@@ -50,6 +50,14 @@ Kegiatan
 <li>
 <a href="../index.html">
 <i class="fa-solid fa-right-from-bracket"></i>
+
+<li>
+    <a href="iuran.html">
+        <i class="fa-solid fa-money-bill-wave"></i>
+        Iuran Warga
+    </a>
+</li>
+
 Logout
 </a>
 </li>
@@ -60,7 +68,7 @@ Logout
 
 <main class="content">
 
-<h1>Data Warga</h1>
+<h1>👥 Data Warga</h1>
 
 <form id="formWarga">
 
@@ -72,17 +80,48 @@ Logout
 
 <input type="text" id="telepon" placeholder="Nomor HP" required>
 
-<button type="submit">
+<input type="hidden" id="editId">
+
+<button type="submit" id="btnSimpan">
 Simpan Data
 </button>
 
 </form>
 
-<hr>
+<br>
 
-<div id="listWarga">
-Belum ada data.
-</div>
+<input
+type="text"
+id="cari"
+placeholder="🔍 Cari Nama atau NIK">
+
+<br><br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>NIK</th>
+
+<th>Nama</th>
+
+<th>Alamat</th>
+
+<th>Telepon</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listWarga">
+
+</tbody>
+
+</table>
 
 </main>
 

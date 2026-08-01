@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kelola Pengumuman | KILAT-06</title>
+<title>Pengumuman | KILAT-06</title>
 
 <link rel="stylesheet" href="../css/style.css">
 
@@ -32,6 +31,13 @@ Dashboard
 </a>
 </li>
 
+<li>
+<a href="warga.html">
+<i class="fa-solid fa-users"></i>
+Data Warga
+</a>
+</li>
+
 <li class="active">
 <a href="pengumuman.html">
 <i class="fa-solid fa-bullhorn"></i>
@@ -48,6 +54,15 @@ Kegiatan
 
 <li>
 <a href="../index.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<li>
+    <a href="iuran.html">
+        <i class="fa-solid fa-money-bill-wave"></i>
+        Iuran Warga
+    </a>
+</li>
+
 Logout
 </a>
 </li>
@@ -58,9 +73,11 @@ Logout
 
 <main class="content">
 
-<h1>Kelola Pengumuman</h1>
+<h1>📢 Kelola Pengumuman</h1>
 
 <form id="formPengumuman">
+
+<input type="hidden" id="editId">
 
 <input
 type="text"
@@ -71,10 +88,11 @@ required>
 <textarea
 id="isi"
 placeholder="Isi Pengumuman"
-rows="5"
 required></textarea>
 
-<button type="submit">
+<button
+type="submit"
+id="btnSimpan">
 
 Simpan Pengumuman
 
@@ -82,13 +100,36 @@ Simpan Pengumuman
 
 </form>
 
-<hr>
+<br>
 
-<div id="listPengumuman">
+<input
+type="text"
+id="cari"
+placeholder="🔍 Cari Pengumuman">
 
-Belum ada data.
+<br><br>
 
-</div>
+<table>
+
+<thead>
+
+<tr>
+
+<th>Judul</th>
+
+<th>Isi</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listPengumuman">
+
+</tbody>
+
+</table>
 
 </main>
 

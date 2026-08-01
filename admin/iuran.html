@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iuran Warga | KILAT-06</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar">
+
+<h2>KILAT-06</h2>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+
+<li><a href="warga.html"><i class="fa-solid fa-users"></i> Data Warga</a></li>
+
+<li><a href="pengumuman.html"><i class="fa-solid fa-bullhorn"></i> Pengumuman</a></li>
+
+<li><a href="kegiatan.html"><i class="fa-solid fa-calendar-days"></i> Kegiatan</a></li>
+
+<li class="active">
+<a href="iuran.html">
+<i class="fa-solid fa-money-bill-wave"></i>
+Iuran Warga
+</a>
+</li>
+
+<li><a href="../index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</aside>
+
+<main class="content">
+
+<h1>💰 Iuran Warga</h1>
+
+<form id="formIuran">
+
+<input type="hidden" id="editId">
+
+<label>Nama Warga</label>
+
+<select id="warga" required>
+
+<option value="">Pilih Warga</option>
+
+</select>
+
+<label>Bulan</label>
+
+<select id="bulan" required>
+
+<option>Januari</option>
+<option>Februari</option>
+<option>Maret</option>
+<option>April</option>
+<option>Mei</option>
+<option>Juni</option>
+<option>Juli</option>
+<option>Agustus</option>
+<option>September</option>
+<option>Oktober</option>
+<option>November</option>
+<option>Desember</option>
+
+</select>
+
+<label>Tahun</label>
+
+<input
+type="number"
+id="tahun"
+value="2026"
+required>
+
+<label>Nominal</label>
+
+<input
+type="number"
+id="nominal"
+value="25000"
+required>
+
+<label>Status</label>
+
+<select id="status">
+
+<option>Lunas</option>
+
+<option>Belum Lunas</option>
+
+</select>
+
+<button type="submit" id="btnSimpan">
+
+Simpan Iuran
+
+</button>
+
+</form>
+
+<br>
+
+<input
+type="text"
+id="cari"
+placeholder="🔍 Cari Warga">
+
+<br><br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nama</th>
+
+<th>Bulan</th>
+
+<th>Tahun</th>
+
+<th>Nominal</th>
+
+<th>Status</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listIuran">
+
+</tbody>
+
+</table>
+
+</main>
+
+</div>
+
+<script type="module" src="../js/iuran.js"></script>
+
+</body>
+</html>
