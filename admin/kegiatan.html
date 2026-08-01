@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelola Kegiatan | KILAT-06</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar">
+
+<h2>KILAT-06</h2>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+</li>
+
+<li>
+<a href="pengumuman.html">
+📢 Pengumuman
+</a>
+</li>
+
+<li class="active">
+<a href="kegiatan.html">
+📅 Kegiatan
+</a>
+</li>
+
+<li>
+<a href="../index.html">
+🚪 Logout
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<main class="content">
+
+<h1>Kelola Kegiatan</h1>
+
+<form id="formKegiatan">
+
+<input
+type="text"
+id="nama"
+placeholder="Nama Kegiatan"
+required>
+
+<input
+type="text"
+id="tanggal"
+placeholder="Tanggal"
+required>
+
+<input
+type="text"
+id="waktu"
+placeholder="Waktu"
+required>
+
+<input
+type="text"
+id="lokasi"
+placeholder="Lokasi"
+required>
+
+<textarea
+id="deskripsi"
+placeholder="Deskripsi"
+required></textarea>
+
+<button type="submit">
+
+Simpan Kegiatan
+
+</button>
+
+</form>
+
+<hr>
+
+<div id="listKegiatan">
+
+Belum ada data.
+
+</div>
+
+</main>
+
+</div>
+
+<script type="module" src="../js/kegiatan.js"></script>
+
+</body>
+</html>

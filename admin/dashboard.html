@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin | KILAT-06</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>KILAT-06</h2>
+
+        <ul>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="pengumuman.html">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    Pengumuman
+                </a>
+            </li>
+
+            <li>
+                <a href="kegiatan.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Kegiatan
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+   <main class="content">
+
+<h1>Dashboard Administrator</h1>
+
+<p>Selamat Datang di Sistem KILAT-06</p>
+
+<div class="cards">
+
+    <div class="box">
+        <h3 id="totalPengumuman">0</h3>
+        <p>Total Pengumuman</p>
+    </div>
+
+    <div class="box">
+        <h3 id="totalKegiatan">0</h3>
+        <p>Total Kegiatan</p>
+    </div>
+
+</div>
+
+<br><br>
+
+<h2>📢 Pengumuman Terbaru</h2>
+
+<div id="pengumumanTerbaru">
+
+Memuat data...
+
+</div>
+
+<br><br>
+
+<h2>📅 Kegiatan Terbaru</h2>
+
+<div id="kegiatanTerbaru">
+
+Memuat data...
+
+</div>
+
+
+    </main>
+
+</div>
+
+<script type="module" src="../js/dashboard.js"></script>
+
+</body>
+</html>
